@@ -1,0 +1,19 @@
+settings
+    **account settings{
+        *paladins
+        *hi rez
+        *smite
+        *twitch
+        *delete data
+    }
+    **notification{
+        *sound
+        *popup
+        *drops collected
+        *collection paused
+        *channels offline
+    }
+    **channel List{
+        add/remove
+        //channels_names
+    }

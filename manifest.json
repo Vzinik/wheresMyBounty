@@ -19,10 +19,9 @@
             "32": "/logo/logo_32.png",
             "48": "/logo/logo_48.png",
             "128": "/logo/logo_128.png"
-        }    
+        },
+        "default_title":"WheresMyBounty"
     },
-    "permissions": [
-        "notifications",
-        "alarms"
-    ]
+    
+    "permissions": ["notifications","alarms","storage"]
 }

@@ -7,35 +7,45 @@
     <body>
         
     <div id="heading">
+        <img class="logo" src="logo.png" alt="logo">
         <p class="title">WheresMyBounty</p>
-        <p id="demo">
-            <img class="logo" src="logo.png" alt="logo">
         
     </div>
     
     <div class="dropdown">
         <div class="text display">
-            <p>Bounty Collected: <p class="text" id="bounty_collected"></p></p>
+            <p class="text" id="bounty_collected">Bounty Collected: <span  id="bCoins">0</span></p>
         </div>
 
         <div class="display">
-            <p id="remaining_time" class="timestamp text"></p><p class="timestamp text">of 4 hour remaining</p>
+            <p class="timestamp text"><span id="remainingTime"></span> of 4 hour remaining</p>
             <div class="total time"><div class="time elapsed"></div></div>
         </div>
 
-        <div class="linebreak" id="fst_break"></div>
+    <div class="linebreak fst_break" ></div>
 
         <div class="text">
-            <p class="label">Notification</p>
+            <p class="label">All Notification</p>
         </div>
 
-        <div class="linebreak"></div>
+    <div class="linebreak"></div>
 
-        <div class="text">
+        <div class="text button" id="settings">
             <p class="label">Settings</p>
         </div>
 
-        <div class="linebreak"></div>
+    <div class="linebreak"></div>
+
+        <div class="text button">
+            <p class="label">Help</p>
+        </div>
+        
+     <div class="linebreak"></div>
+
+        <div class="text button">
+            <p class="label">See for updates</p>
+        </div>
+
     </div>
     </body>
 </html>

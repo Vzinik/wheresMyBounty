@@ -1,3 +1,11 @@
+{
+    chrome.storage.onChanged.addListener(function(changes,string){
+        document.getElementById("bCoins").innerHTML=changes.bounty.newValue.toString();
+        chrome.action.setBadgeText({text:changes.bounty.newValue.toString()});
+        document.getElementsByClassName("elapsed")[0].style.width=changes.tRem.newValue.toString()+"%";
+    });
+
+}
 document.getElementsByClassName("logo")[0].addEventListener('click',powerup);
 let i=1;
 let a=1;
@@ -10,7 +18,6 @@ function powerup(){
             active: false,
             index: 0
         }));*/
-        const a=1;
         chrome.action.setBadgeText({text: power[a-i]}); //on-off notification on icon
         i=i*(-1);
 chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
@@ -26,3 +33,11 @@ chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
     });
     
 }
+
+document.getElementById("settings").addEventListener("click",function(){
+    chrome.tabs.create(
+        {
+            url: '/settings.html'
+        }
+    )
+})
