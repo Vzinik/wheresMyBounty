@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Settings | WheresMyBounty</title>
+        <script defer src="settings.js"></script>
+        <link rel="stylesheet" href="settings.css">
+        <!--<link rel="preload" href="fonts/extension-inter-bold.woff2" as="font" crossorigin="anonymous" />-->
+    </head>
+    <body>
+<!--sideNavebar----.......------->
+        <div class="menu">
+            <div class="headline">
+                <div class="avatar"><p>udsludsaksygs</p></div>
+                <div class="container-name"><p id="name">Vzinik</p></div>
+            </div>
+            <div class="container">
+                <div class="options" id="notifications">
+                    General settings
+                </div>
+                <div class="options" id="accounts">
+                    Accounts
+                </div>
+                <div class="options" id="channels">
+                    Channels
+                </div>
+            </div>
+        </div>
+
+
+        <div class="items">
+    <!--General Settings--------------------------------------------->
+            <div class="notification_items">
+                <div>
+                    <span>Sounds</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div>
+                    <span>Popups</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                
+                <div>
+                    <span>Dark Mode</span>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </div>
+            
+<!--accountsMenu------------------------------------------------->
+            <div class="account_items">
+                <nav><ul>
+                        <li id="paladins">Paladins</li>
+                        <li id="twitch">Twitch</li>
+                        <li id="hirez">Hi-rez</li>
+                    </ul>
+                </nav>
+                <div class="lineBr"></div>
+
+                <div class="data">
+                    <div class="username">
+                        <label for="uname"><b>Username</b></label>
+                        <input type="text" placeholder="Enter Username">
+                    </div>
+                    <div class="password">
+                        <label for="pword"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password">
+                    </div>
+                </div>
+            </div>
+
+<!--Twitch Channel------------------------------------------->
+            <div class="channel_items">
+                <p><b><h1>Twitch Channels</h1></b></p>
+                <P>Improve the coin Collection system by adding more twitch channels.<br>WheresMyBounty will switch between these listed channels if necessary</p>
+                 <div class="formAcnt">
+                    <div id="container_ch1"><input type="text" name="tchannel" id="ch1" class="ch2" placeholder="Example: PaladinsGame"></div>
+                    <button class="addButton" id="addButton">ADD</button>
+                    <div class="warning">This channel does not exist</div>
+                 </div>
+                 <ul class="chList">
+                     <li>klujadsf</li>
+                     <li>llkdsa</li>
+                 </ul>
+            </div>
+        </div>
+    </body>
+</html>
