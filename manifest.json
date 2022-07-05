@@ -1,27 +1,38 @@
 {
     "name": "WheresMyBounty",
     "description": "collects the bounty coins from twitch",
-    "version": "0.01",
+    "version": "1.0",
     "manifest_version":3,
     "background": {
         "service_worker": "background.js"
     },
     "icons":{
-        "16": "/logo/logo_16.png",
-        "32": "/logo/logo_32.png",
-        "48": "/logo/logo_48.png",
         "128": "/logo/logo_128.png"
     },
     "action":{
         "default_popup":"popup.html",
         "default_icons":{
-            "16": "/logo/logo_16.png",
-            "32": "/logo/logo_32.png",
-            "48": "/logo/logo_48.png",
             "128": "/logo/logo_128.png"
         },
         "default_title":"WheresMyBounty"
     },
-    
-    "permissions": ["notifications","alarms","storage"]
+    "content_scripts":[
+        {
+            "matches":["https://www.twitch.tv/*"],
+            "exclude_globs":[
+                
+                "https://www.twitch.tv/p/*",
+                "https://www.twitch.tv/products/*",
+                "https://www.twitch.tv/*/manager*",
+                "https://www.twitch.tv/broadcast",
+                "https://www.twitch.tv/messages/*",
+                "https://www.twitch.tv/settings"
+            ],
+            "js":["content.js"],
+            "run_at":"document_end"
+        }
+    ],
+    "externally_connectable":{"matches":["https://www.twitch.tv/*"]},
+    "host_permissions": ["https://www.twitch.tv/directory/game/Paladins"],
+    "permissions": ["notifications","alarms","contextMenus","storage","tabs","scripting"]
 }

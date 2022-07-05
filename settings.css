@@ -48,9 +48,6 @@ body{
     padding: 0.3em 12% 0.3em 15%;
     margin: 0 0 0.1em 0;
 }
-#accounts{
-    background-color: #bbf1f7;
-}
 .options:hover{
     cursor: pointer;
 }
@@ -82,7 +79,7 @@ ul {
     display: none;
 }
   .notification_items{
-      display: none;
+      display: block;
   }
   .channel_items{
     display: none;
@@ -203,7 +200,7 @@ ul {
     width: 6cm;
   }
   .warning{
-    visibility: hidden;
+    visibility:hidden;
     position: relative;
     top: -0.2cm;
     color: red;
@@ -213,6 +210,9 @@ ul {
   .chList{
     display: block;
     margin: 0.5cm 0 0 1.6cm;
+  }
+  li{
+    background-color: orange;
   }
   .username{
     margin-bottom: 0.3cm;

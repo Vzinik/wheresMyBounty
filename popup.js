@@ -1,43 +1,39 @@
 {
-    chrome.storage.onChanged.addListener(function(changes,string){
-        document.getElementById("bCoins").innerHTML=changes.bounty.newValue.toString();
-        chrome.action.setBadgeText({text:changes.bounty.newValue.toString()});
-        document.getElementsByClassName("elapsed")[0].style.width=changes.tRem.newValue.toString()+"%";
-    });
+    // chrome.storage.onChanged.addListener(function(changes,string){
+    //     document.getElementById("bCoins").innerHTML=changes.bounty.newValue.toString();
+    //     chrome.action.setBadgeText({text:changes.bounty.newValue.toString()});
+    //     document.querySelector(".elapsed").style.width=changes.tRem.newValue.toString()+"%";
+    // });
 
 }
-document.getElementsByClassName("logo")[0].addEventListener('click',powerup);
-let i=1;
-let a=1;
-function powerup(){
-    const power=["ON","none","OFF"];
+{
+    var i=true;
+    document.querySelector(".logo").addEventListener('click',()=>{
+        chrome.storage.local.get(["button"],(data)=>{
+            i=data.button;
+            chrome.storage.local.set({"button": !i});
+            console.log(i);
+        })
+        //chrome.tabs.create({
+        //     url: 'https://www.twitch.tv/paladinsgame',
+        //             active: false,
+        //             index: 0
+        // })
+    });
+}
+
+
     //alert("test");
-   /* while(!chrome.tabs.create(
-        {
-            url: 'https://www.twitch.tv/drops/inventory',
-            active: false,
-            index: 0
-        }));*/
-        chrome.action.setBadgeText({text: power[a-i]}); //on-off notification on icon
-        i=i*(-1);
-chrome.action.setBadgeBackgroundColor({color: '#4688F1'});
-
-    chrome.notifications.create('test',{
-        type:'basic',
-        iconUrl:'/logo/logo_48.png',
-        title:'are you gay?',
-        //contextMessage: 'none',
-        message:'please confirm',
-        buttons:[{title:'yes'},{title:'No'}],
-        requireInteraction: true
-    });
+    // while(!chrome.tabs.create(
+    //     {
+    //         url: 'https://www.twitch.tv/drops/inventory',
+    //         active: false,
+    //         index: 0
+    //     }));
     
-}
+    
+
 
 document.getElementById("settings").addEventListener("click",function(){
-    chrome.tabs.create(
-        {
-            url: '/settings.html'
-        }
-    )
+    chrome.tabs.create({url: '/settings.html'});
 })
