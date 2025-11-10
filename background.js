@@ -1,10 +1,10 @@
-var tabId;
-var tabUrl="";
-var channel="";
-var dirTab;
-var dirUrl="";
-var noti;
-var text;
+let tabId;
+let tabUrl="";
+let channel="";
+let dirTab;
+let dirUrl="";
+let noti;
+let text;
 
 chrome.runtime.onInstalled.addListener((details) => {
 	if(details.reason=='install'){
@@ -133,5 +133,6 @@ console.log('background?');
 		}
 	});
 	
+
 
 
